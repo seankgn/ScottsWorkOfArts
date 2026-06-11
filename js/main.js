@@ -19,7 +19,7 @@ siteNav.querySelectorAll('a').forEach((link) => {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Quote request form -> emails Scott via FormSubmit (no backend needed)
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/Scottsworkofarts@gmail.com';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/scottsworkofarts@gmail.com';
 
 const form = document.getElementById('quote-form');
 const status = document.getElementById('form-status');

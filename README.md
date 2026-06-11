@@ -1,7 +1,7 @@
-# Scott's Work of Arts
+# Scott's Works of Art
 
-One-page website for Scott's Work of Arts — property maintenance & landscaping based in Ocoee, FL, serving West Orange County.
-"Simple the Better" — call (407) 558-1006 for a free quote.
+One-page website for Scott's Works of Art — property maintenance & landscaping based in Ocoee, FL, serving West Orange County.
+"The simpler, the better" — call (407) 558-1006 for a free quote.
 
 ## Structure
 
@@ -32,7 +32,7 @@ A custom domain (e.g. `scottsworkofarts.com`, ~$12/yr) can be pointed at either 
 
 ## Quote request form
 
-The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/Scottsworkofarts@gmail.com`) — free, no account needed.
+The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/scottsworkofarts@gmail.com`) — free, no account needed.
 **One-time activation:** the first time someone submits the form on the live site, FormSubmit emails Scott's Gmail an
 "Activate Form" link. Until he clicks it, submissions are held. So after deploying: submit the form once yourself,
 have Scott click the activation link, then submit again to confirm it arrives.
