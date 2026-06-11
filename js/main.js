@@ -54,7 +54,9 @@ form.addEventListener('submit', async (e) => {
   status.textContent = 'Sending...';
   status.className = 'form-status';
 
-  const data = Object.fromEntries(new FormData(form));
+  const data = Object.fromEntries(
+    [...new FormData(form)].filter(([, value]) => value.trim() !== '')
+  );
   data._subject = 'New quote request from the website';
   data._template = 'table';
 
