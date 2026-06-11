@@ -18,6 +18,15 @@ siteNav.querySelectorAll('a').forEach((link) => {
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Service cards link to the quote form with that service pre-selected
+const serviceSelect = document.querySelector('select[name="service"]');
+
+document.querySelectorAll('.service-card[data-service]').forEach((card) => {
+  card.addEventListener('click', () => {
+    serviceSelect.value = card.dataset.service;
+  });
+});
+
 // Quote request form -> emails Scott via FormSubmit (no backend needed)
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/scottsworkofarts@gmail.com';
 

@@ -251,12 +251,39 @@ h1, h2, h3 { line-height: 1.2; }
 }
 
 .service-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   background: var(--white);
   border: 1px solid #e3eee6;
   border-radius: var(--radius);
-  padding: 1.6rem 1.2rem;
+  padding: 1.6rem 1.2rem 2.4rem;
   text-align: center;
+  position: relative;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.service-card::after {
+  content: 'Get a quote \2192';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--green);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.service-card:hover::after,
+.service-card:focus-visible::after {
+  opacity: 1;
+}
+
+/* on touch screens there's no hover — always show the hint */
+@media (hover: none) {
+  .service-card::after { opacity: 1; }
 }
 
 .service-card:hover {
