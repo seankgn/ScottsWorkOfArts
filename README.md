@@ -30,6 +30,13 @@ Then open http://localhost:4173/
 
 A custom domain (e.g. `scottsworkofarts.com`, ~$12/yr) can be pointed at either host later.
 
+## Quote request form
+
+The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/Scottsworkofarts@gmail.com`) — free, no account needed.
+**One-time activation:** the first time someone submits the form on the live site, FormSubmit emails Scott's Gmail an
+"Activate Form" link. Until he clicks it, submissions are held. So after deploying: submit the form once yourself,
+have Scott click the activation link, then submit again to confirm it arrives.
+
 ## Updating content
 
 Everything customers see is in `index.html` — services, phone number, email, and text are all plain HTML. Edit, commit, push; Pages redeploys automatically.

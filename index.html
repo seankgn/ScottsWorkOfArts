@@ -91,11 +91,11 @@
         <h1>Your property, <span class="accent">cared for like a work of art.</span></h1>
         <p class="hero-lead">For all your general maintenance &mdash; landscaping, painting, pressure washing, handyman work and more. One call covers it all.</p>
         <div class="hero-actions">
-          <a href="tel:+14075581006" class="btn btn-primary btn-lg">
+          <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote</a>
+          <a href="tel:+14075581006" class="btn btn-outline btn-lg">
             <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use href="#ic-phone"></use></svg>
-            Call for a Free Quote
+            Call (407) 558-1006
           </a>
-          <a href="#services" class="btn btn-outline btn-lg">See Our Services</a>
         </div>
         <ul class="hero-points">
           <li>Free estimates</li>
@@ -194,7 +194,7 @@
             We treat every property like our own &mdash; it's called a work of art for a reason.
           </li>
         </ul>
-        <a href="tel:+14075581006" class="btn btn-primary btn-lg">Get Your Free Estimate</a>
+        <a href="#quote" class="btn btn-primary btn-lg">Get Your Free Estimate</a>
       </div>
       <div class="why-stats">
         <div class="stat-card">
@@ -222,18 +222,60 @@
     <div class="container contact-inner">
       <p class="section-kicker light">Get in touch</p>
       <h2>Ready to get started?</h2>
-      <p class="contact-lead">Proudly serving Ocoee, Winter Garden, Windermere, Apopka, and the greater West Orange County area. Call or email today for a free, no-obligation quote.</p>
-      <div class="contact-cards">
-        <a href="tel:+14075581006" class="contact-card">
-          <svg viewBox="0 0 24 24" class="icon-lg" aria-hidden="true"><use href="#ic-phone"></use></svg>
-          <span class="contact-label">Call or text</span>
-          <span class="contact-value">(407) 558-1006</span>
-        </a>
-        <a href="mailto:Scottsworkofarts@gmail.com" class="contact-card">
-          <svg viewBox="0 0 24 24" class="icon-lg" aria-hidden="true"><use href="#ic-mail"></use></svg>
-          <span class="contact-label">Email us</span>
-          <span class="contact-value">Scottsworkofarts@gmail.com</span>
-        </a>
+      <p class="contact-lead">Proudly serving Ocoee, Winter Garden, Windermere, Apopka, and the greater West Orange County area. Request a free, no-obligation quote below &mdash; or call directly.</p>
+      <div class="contact-grid">
+        <form class="quote-form" id="quote-form" novalidate>
+          <h3 id="quote">Request a Free Quote</h3>
+          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-row">
+            <label>
+              Name *
+              <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+            </label>
+            <label>
+              Phone *
+              <input type="tel" name="phone" required autocomplete="tel" placeholder="(407) 555-0123">
+            </label>
+          </div>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com (optional)">
+          </label>
+          <label>
+            What do you need help with?
+            <select name="service">
+              <option>Property Management</option>
+              <option>Detail Landscaping</option>
+              <option>Window Cleaning</option>
+              <option>Sod Laying</option>
+              <option>Mulching</option>
+              <option>Interior/Exterior Painting</option>
+              <option>Carpet Cleaning</option>
+              <option>Pressure Washing</option>
+              <option>Gutter Cleaning</option>
+              <option>Handyman Service</option>
+              <option>Something else / multiple jobs</option>
+            </select>
+          </label>
+          <label>
+            Tell us about the job
+            <textarea name="message" rows="4" placeholder="A few details &mdash; address area, size of the job, timing..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg form-submit">Send Quote Request</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+        <div class="contact-cards">
+          <a href="tel:+14075581006" class="contact-card">
+            <svg viewBox="0 0 24 24" class="icon-lg" aria-hidden="true"><use href="#ic-phone"></use></svg>
+            <span class="contact-label">Prefer to talk? Call or text</span>
+            <span class="contact-value">(407) 558-1006</span>
+          </a>
+          <a href="mailto:Scottsworkofarts@gmail.com" class="contact-card">
+            <svg viewBox="0 0 24 24" class="icon-lg" aria-hidden="true"><use href="#ic-mail"></use></svg>
+            <span class="contact-label">Email us</span>
+            <span class="contact-value">Scottsworkofarts@gmail.com</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
