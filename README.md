@@ -1,6 +1,6 @@
 # Scott's Work of Arts
 
-One-page website for Scott's Work of Arts — property maintenance & landscaping in the Greater Orlando area.
+One-page website for Scott's Work of Arts — property maintenance & landscaping based in Ocoee, FL, serving West Orange County.
 "Simple the Better" — call (407) 558-1006 for a free quote.
 
 ## Structure

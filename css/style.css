@@ -404,7 +404,7 @@ h1, h2, h3 { line-height: 1.2; }
   opacity: 0.85;
 }
 
-.contact-value { font-size: 1.15rem; font-weight: 700; word-break: break-all; }
+.contact-value { font-size: clamp(0.9rem, 4vw, 1.15rem); font-weight: 700; overflow-wrap: anywhere; }
 
 /* ===== Footer ===== */
 .site-footer {
