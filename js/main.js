@@ -28,7 +28,7 @@ document.querySelectorAll('.service-card[data-service]').forEach((card) => {
 });
 
 // Quote request form -> emails Scott via FormSubmit (no backend needed)
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/scottsworkofarts@gmail.com';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/donald@scottsworkofartsllc.com';
 
 const form = document.getElementById('quote-form');
 const status = document.getElementById('form-status');

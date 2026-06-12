@@ -29,9 +29,9 @@ Then open http://localhost:4173/
 
 ## Quote request form
 
-The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/scottsworkofarts@gmail.com`). Free, no account needed.
+The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/donald@scottsworkofartsllc.com`). Free, no account needed.
 
-**One-time activation, still pending:** the first submission from the live site triggers an email to Scott's Gmail with an "Activate Form" link. Until he clicks it, submissions are held. To finish: submit the form once on the live site, have Scott click the activation link, then submit again to confirm it arrives in his inbox.
+**One-time activation, still pending:** the first submission from the live site triggers an email to donald@scottsworkofartsllc.com with an "Activate Form" link. Until he clicks it, submissions are held. To finish: submit the form once on the live site, have Scott click the activation link, then submit again to confirm it arrives in his inbox.
 
 ## Remaining launch checklist
 
