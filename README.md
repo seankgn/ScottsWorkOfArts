@@ -1,6 +1,6 @@
-# Scott's Works of Art
+# Scott's Work of Arts
 
-One-page website for Scott's Works of Art, a property maintenance and landscaping business based in Ocoee, FL, serving West Orange County. "The simpler, the better." Call (407) 558-1006 for a free quote.
+One-page website for Scott's Work of Arts, a property maintenance and landscaping business based in Ocoee, FL, serving West Orange County. "The simpler, the better." Call (407) 558-1006 for a free quote.
 
 **Live site:** https://www.scottsworksofart.com
 
@@ -36,7 +36,7 @@ The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/scott
 ## Remaining launch checklist
 
 1. Activate the quote form (see above).
-2. Register the typo domain `scottsworkofarts.com` (the spelling printed on the current business cards and flyers) and add a Cloudflare redirect rule pointing it at `scottsworksofart.com`.
+2. Register `scottsworkofarts.com` (matches the registered business name, the printed cards, and the Gmail address) and make it the PRIMARY domain: add it in GitHub Pages settings with matching Cloudflare DNS records, then redirect `scottsworksofart.com` to it with a Cloudflare redirect rule.
 3. Set up a Google Business Profile with Scott (service-area business covering Ocoee, Winter Garden, Windermere, Apopka) using the live URL as the website.
 4. Later, when job photos exist: add a gallery section (compress photos first so the page stays fast).
 
