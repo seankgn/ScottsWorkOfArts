@@ -77,3 +77,65 @@ form.addEventListener('submit', async (e) => {
     submitBtn.disabled = false;
   }
 });
+
+// Gallery lightbox (images + video)
+const items = Array.from(document.querySelectorAll('.gal-item'));
+const lightbox = document.getElementById('lightbox');
+
+if (items.length && lightbox) {
+  const stage = document.getElementById('lb-stage');
+  const cap = document.getElementById('lb-cap');
+  let current = 0;
+
+  const render = (i) => {
+    current = (i + items.length) % items.length;
+    const el = items[current];
+    stage.innerHTML = '';
+    if (el.dataset.video) {
+      const v = document.createElement('video');
+      v.src = el.dataset.video;
+      v.poster = el.dataset.poster || '';
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      stage.appendChild(v);
+    } else {
+      const img = document.createElement('img');
+      img.src = el.dataset.full;
+      img.alt = el.dataset.cap || '';
+      stage.appendChild(img);
+    }
+    cap.textContent = el.dataset.cap || '';
+  };
+
+  const open = (i) => {
+    render(i);
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    stage.innerHTML = ''; // stops any playing video
+  };
+
+  items.forEach((el, i) => el.addEventListener('click', () => open(i)));
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-next').addEventListener('click', () => render(current + 1));
+  document.getElementById('lb-prev').addEventListener('click', () => render(current - 1));
+
+  // Click the dark backdrop (not the image/controls) to close
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') render(current + 1);
+    else if (e.key === 'ArrowLeft') render(current - 1);
+  });
+}
