@@ -373,12 +373,6 @@ h1, h2, h3 { line-height: 1.2; }
 
 .ba-tag.ba-after { background: var(--green); }
 
-.ba-card figcaption {
-  padding: 0.85rem 1rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-
 /* Gallery grid */
 .gallery {
   display: grid;
