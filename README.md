@@ -13,9 +13,11 @@ One-page website for Scott's Work of Arts, a property maintenance and landscapin
 
 ## Structure
 
-- `index.html`: the whole site (hero, services, why us, quote form, contact)
+- `index.html`: the main page (hero, services, before/after "Our Work" section, why us, quote form, contact)
+- `our-work.html`: the project gallery page (after-only photo grid), linked from the homepage "Our Work" section
 - `css/style.css`: all styling (green brand palette from the business card)
-- `js/main.js`: mobile menu, service-card-to-form prefill, quote form submission, footer year
+- `js/main.js`: mobile menu, service-card-to-form prefill, quote form submission, footer year, and the photo lightbox (used on both pages)
+- `img/gallery/`: web-optimized project photos (before/after pairs and gallery shots) plus `thumb/` versions for the grid
 - `img/favicon.svg`: browser tab icon
 - `.claude/serve.ps1`: tiny local preview server (this machine has no Node or Python)
 
@@ -38,7 +40,6 @@ The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/donal
 1. Activate the quote form (see above).
 2. Register `scottsworkofarts.com` (matches the registered business name, the printed cards, and the Gmail address) and make it the PRIMARY domain: add it in GitHub Pages settings with matching Cloudflare DNS records, then redirect `scottsworksofart.com` to it with a Cloudflare redirect rule.
 3. Set up a Google Business Profile with Scott (service-area business covering Ocoee, Winter Garden, Windermere, Apopka) using the live URL as the website.
-4. Later, when job photos exist: add a gallery section (compress photos first so the page stays fast).
 
 ## Updating content
 
