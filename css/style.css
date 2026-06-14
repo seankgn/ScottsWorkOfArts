@@ -329,6 +329,22 @@ h1, h2, h3 { line-height: 1.2; }
   font-weight: 700;
 }
 
+.work-page { padding-top: 5.5rem; }
+
+.work-back {
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+.work-back a {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+.work-back a:hover { text-decoration: underline; }
+
+.work-more { margin-top: 2.5rem; }
+
 /* Before / After */
 .ba-grid {
   display: grid;
@@ -347,7 +363,12 @@ h1, h2, h3 { line-height: 1.2; }
 
 .ba-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 
-.ba-img { position: relative; display: block; }
+.ba-img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
 
 .ba-img img {
   display: block;
@@ -355,7 +376,13 @@ h1, h2, h3 { line-height: 1.2; }
   height: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
+
+.ba-img:hover img,
+.ba-img:focus-visible img { transform: scale(1.05); }
+
+.ba-img:focus-visible { outline: 3px solid var(--green); outline-offset: -3px; }
 
 .ba-tag {
   position: absolute;
@@ -376,8 +403,8 @@ h1, h2, h3 { line-height: 1.2; }
 /* Gallery grid */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
   margin-top: 1.6rem;
 }
 

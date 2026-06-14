@@ -33,7 +33,7 @@ const FORM_ENDPOINT = 'https://formsubmit.co/ajax/donald@scottsworkofartsllc.com
 const form = document.getElementById('quote-form');
 const status = document.getElementById('form-status');
 
-form.addEventListener('submit', async (e) => {
+if (form) form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   // simple required-field check (novalidate lets us style it ourselves)
@@ -78,8 +78,8 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
-// Gallery lightbox (images + video)
-const items = Array.from(document.querySelectorAll('.gal-item'));
+// Lightbox for gallery tiles and before/after photos
+const items = Array.from(document.querySelectorAll('.gal-item, .ba-img'));
 const lightbox = document.getElementById('lightbox');
 
 if (items.length && lightbox) {
@@ -122,7 +122,14 @@ if (items.length && lightbox) {
     stage.innerHTML = ''; // stops any playing video
   };
 
-  items.forEach((el, i) => el.addEventListener('click', () => open(i)));
+  items.forEach((el, i) => {
+    el.addEventListener('click', () => open(i));
+    if (el.tagName !== 'BUTTON') {
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+      });
+    }
+  });
   document.getElementById('lb-close').addEventListener('click', close);
   document.getElementById('lb-next').addEventListener('click', () => render(current + 1));
   document.getElementById('lb-prev').addEventListener('click', () => render(current - 1));
