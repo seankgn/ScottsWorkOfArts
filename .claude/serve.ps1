@@ -20,6 +20,10 @@ while ($listener.IsListening) {
   if ($path -eq '/') { $path = '/index.html' }
   $file = Join-Path $root ($path -replace '/', '\')
   $full = [System.IO.Path]::GetFullPath($file)
+  # Clean URLs: if /our-work has no file, fall back to /our-work.html (matches GitHub Pages)
+  if (-not (Test-Path $full -PathType Leaf) -and (Test-Path "$full.html" -PathType Leaf)) {
+    $full = "$full.html"
+  }
   if ($full.StartsWith($root, [System.StringComparison]::OrdinalIgnoreCase) -and (Test-Path $full -PathType Leaf)) {
     $bytes = [System.IO.File]::ReadAllBytes($full)
     $ext = [System.IO.Path]::GetExtension($full).ToLower()

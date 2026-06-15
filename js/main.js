@@ -84,7 +84,6 @@ const lightbox = document.getElementById('lightbox');
 
 if (items.length && lightbox) {
   const stage = document.getElementById('lb-stage');
-  const cap = document.getElementById('lb-cap');
   let current = 0;
 
   const render = (i) => {
@@ -105,7 +104,6 @@ if (items.length && lightbox) {
       img.alt = el.dataset.cap || '';
       stage.appendChild(img);
     }
-    cap.textContent = el.dataset.cap || '';
   };
 
   const open = (i) => {
