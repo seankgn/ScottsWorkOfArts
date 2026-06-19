@@ -32,17 +32,14 @@ Then open http://localhost:4173/
 
 ## Quote request form
 
-The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/donald@scottsworkofartsllc.com`). Free, no account needed.
+The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/donald@scottsworkofarts.com`). Free, no account needed.
 
-**One-time activation, still pending:** the first submission from the live site triggers an email to donald@scottsworkofartsllc.com with an "Activate Form" link. Until he clicks it, submissions are held. To finish: submit the form once on the live site, have Scott click the activation link, then submit again to confirm it arrives in his inbox.
+**One-time activation:** the first submission from the live site triggers an email to donald@scottsworkofarts.com with an "Activate Form" link. Until he clicks it, submissions are held. To finish: submit the form once on the live site, have Scott click the activation link, then submit again to confirm it arrives in his inbox. (This needs redoing now that the address changed from the old `…llc.com` mailbox.)
 
 ## Remaining launch checklist
 
-1. Activate the quote form (see above).
-2. **Email migration** (in progress). The site still uses `donald@scottsworkofartsllc.com` (a GoDaddy mailbox), which still works. To finish moving to the branded address:
-   - Activate Porkbun Hosted Email for `donald@scottsworkofarts.com` (Porkbun auto-adds MX + SPF/DKIM so sending is authenticated).
-   - Swap the 5 site references from `donald@scottsworkofartsllc.com` to `donald@scottsworkofarts.com` (`index.html` JSON-LD, contact card, both footers, and the FormSubmit endpoint in `js/main.js`), then re-activate FormSubmit for the new address.
-   - Only then retire the old domains: redirect or let lapse `scottsworksofart.com` (Cloudflare) and `scottsworkofartsllc.com` (GoDaddy) — first confirm the `…llc.com` address isn't a login/recovery email on any account, and notify the few contacts who have it.
+1. Activate the quote form for the new address (see above).
+2. **Retire the old domains** (email is now migrated to `donald@scottsworkofarts.com`, a Porkbun Hosted Email mailbox with authenticated SPF/DKIM/DMARC). When ready: let `scottsworksofart.com` (Cloudflare, now 301-redirecting to the live site) and `scottsworkofartsllc.com` (GoDaddy, also redirecting; mailbox is Microsoft 365) lapse — first confirm the `…llc.com` address isn't a login/recovery email on any account, save anything worth keeping out of the M365 mailbox, cancel the separate M365 email plan, and notify the few contacts who have the old address.
 3. Set up a Google Business Profile with Scott (service-area business covering Ocoee, Winter Garden, Windermere, Apopka) using the live URL as the website.
 
 ## Updating content
