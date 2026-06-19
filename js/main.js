@@ -28,7 +28,9 @@ document.querySelectorAll('.service-card[data-service]').forEach((card) => {
 });
 
 // Quote request form -> emails Scott via FormSubmit (no backend needed)
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/donald@scottsworkofarts.com';
+// FormSubmit endpoint — uses FormSubmit's token (not the naked email) so the
+// address can't be scraped from the page source. Token maps to donald@scottsworkofarts.com.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/96fbec4ad106c6e2765969d9cd883183';
 
 const form = document.getElementById('quote-form');
 const status = document.getElementById('form-status');
