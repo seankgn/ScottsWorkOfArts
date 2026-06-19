@@ -38,8 +38,13 @@ The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/donal
 
 ## Remaining launch checklist
 
-1. **Retire the old domains** (email is now migrated to `donald@scottsworkofarts.com`, a Porkbun Hosted Email mailbox with authenticated SPF/DKIM/DMARC). When ready: let `scottsworksofart.com` (Cloudflare, now 301-redirecting to the live site) and `scottsworkofartsllc.com` (GoDaddy, also redirecting; mailbox is Microsoft 365) lapse — first confirm the `…llc.com` address isn't a login/recovery email on any account, save anything worth keeping out of the M365 mailbox, cancel the separate M365 email plan, and notify the few contacts who have the old address.
-2. Set up a Google Business Profile with Scott (service-area business covering Ocoee, Winter Garden, Windermere, Apopka) using the live URL as the website.
+1. Set up a Google Business Profile with Scott (service-area business covering Ocoee, Winter Garden, Windermere, Apopka) using the live URL as the website.
+
+## Old domains (retired)
+
+Auto-renew is off on both old domains; they 301-redirect to the live site until they lapse at end of term, then expire:
+- `scottsworksofart.com` (Cloudflare) — was the original live domain.
+- `scottsworkofartsllc.com` (GoDaddy) — held the old Microsoft 365 mailbox. Confirm the separate M365 email plan is also cancelled so it doesn't keep billing after the domain lapses.
 
 ## Updating content
 
