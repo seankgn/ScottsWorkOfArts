@@ -44,7 +44,7 @@ The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/donal
 
 Auto-renew is off on both old domains; they 301-redirect to the live site until they lapse at end of term, then expire:
 - `scottsworksofart.com` (Cloudflare) — was the original live domain.
-- `scottsworkofartsllc.com` (GoDaddy) — held the old Microsoft 365 mailbox. Confirm the separate M365 email plan is also cancelled so it doesn't keep billing after the domain lapses.
+- `scottsworkofartsllc.com` (GoDaddy) — held the old Microsoft 365 mailbox. The M365 email plan has been cancelled.
 
 ## Updating content
 
