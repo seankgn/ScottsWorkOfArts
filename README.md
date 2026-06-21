@@ -36,9 +36,18 @@ The form posts to [FormSubmit](https://formsubmit.co) (`formsubmit.co/ajax/donal
 
 **Activated.** The form is live and confirmed delivering to donald@scottsworkofarts.com. The endpoint uses FormSubmit's token (`formsubmit.co/ajax/<token>`) rather than the naked email, so the address can't be scraped from the page source. If the address ever changes again, re-activate FormSubmit and replace the token.
 
-## Remaining launch checklist
+## Google presence & SEO
 
-1. Set up a Google Business Profile with Scott (service-area business covering Ocoee, Winter Garden, Windermere, Apopka) using the live URL as the website.
+- **Google Business Profile** — set up and verified. Service-area business (no public address; he works at customers' sites) covering Ocoee, Winter Garden, Windermere, and Apopka, with `https://scottsworkofarts.com` as the website. A duplicate listing existed and got tangled up; we're keeping one profile, filled out with the business description, categories (Landscaper + Painter, Pressure washing, Handyman, Gutter cleaning), phone, and ~10 work photos from `img/gallery/`.
+- **Google Search Console** — domain property for `scottsworkofarts.com` verified (DNS TXT at Porkbun). `sitemap.xml` submitted; homepage and `/our-work` manually requested for indexing.
+- **On-site SEO files** — `sitemap.xml`, `robots.txt` (points to the sitemap), and `rel="canonical"` tags on both pages all declare `scottsworkofarts.com` as canonical.
+- **Domain migration in progress** — search still shows the retired `scottsworksofart.com` because Google has years of history on it and hasn't finished consolidating onto the new domain via the 301 redirect. The canonical tags + sitemap + Search Console speed this up; expect a few days to ~2 weeks. Keep the old domain's redirect alive until Google fully switches so its SEO authority transfers.
+
+## Possible next steps
+
+- Gather Google reviews from past customers (biggest lever for local ranking).
+- Optional: Search Console "Change of Address" from the old domain to formally migrate indexing (needs the old domain verified in Search Console too).
+- Optional, once a few reviews are in and the listing shows on Maps: Local Services Ads ("Google Guaranteed") — better fit for a home-services business than standard Search ads.
 
 ## Old domains (retired)
 
