@@ -127,13 +127,19 @@ h1, h2, h3 { line-height: 1.2; }
   gap: 1.6rem;
 }
 
-.site-nav a {
+.site-nav a:not(.btn) {
   text-decoration: none;
   color: var(--ink);
   font-weight: 500;
+  padding-bottom: 2px;
+  background: linear-gradient(var(--green), var(--green)) left bottom / 0% 2px no-repeat;
+  transition: background-size 0.25s ease, color 0.15s ease;
 }
 
-.site-nav a:not(.btn):hover { color: var(--green); }
+.site-nav a:not(.btn):hover {
+  color: var(--green-dark);
+  background-size: 100% 2px;
+}
 
 .nav-toggle {
   display: none;
