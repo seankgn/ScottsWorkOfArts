@@ -145,4 +145,22 @@ if (items.length && lightbox) {
     else if (e.key === 'ArrowRight') render(current + 1);
     else if (e.key === 'ArrowLeft') render(current - 1);
   });
+
+  // Swipe left/right to change photos on touch screens
+  let touchX = null;
+  let touchY = null;
+  lightbox.addEventListener('touchstart', (e) => {
+    touchX = e.touches[0].clientX;
+    touchY = e.touches[0].clientY;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', (e) => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    const dy = e.changedTouches[0].clientY - touchY;
+    touchX = null;
+    touchY = null;
+    if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+      render(dx < 0 ? current + 1 : current - 1);
+    }
+  }, { passive: true });
 }
