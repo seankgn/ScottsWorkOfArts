@@ -80,6 +80,40 @@ if (form) form.addEventListener('submit', async (e) => {
   }
 });
 
+// Gentle reveal-on-scroll for cards (skipped if the user prefers reduced motion)
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const targets = document.querySelectorAll(
+    '.service-card, .ba-card, .gal-item, .why-list li, .stat-card, .contact-card'
+  );
+  let observerFired = false;
+
+  const revealed = new IntersectionObserver((entries) => {
+    observerFired = true;
+    entries.forEach(({ isIntersecting, target }) => {
+      if (!isIntersecting) return;
+      revealed.unobserve(target);
+      target.classList.add('in');
+      // strip the helper classes once the animation is done so they
+      // can't interfere with hover transforms later
+      setTimeout(() => target.classList.remove('reveal', 'in'), 700);
+    });
+  }, { rootMargin: '0px 0px -8% 0px' });
+
+  targets.forEach((el) => {
+    el.classList.add('reveal');
+    revealed.observe(el);
+  });
+
+  // Watchdog: a healthy observer reports every element right away. If it
+  // hasn't said anything, never leave the page content invisible.
+  setTimeout(() => {
+    if (!observerFired) {
+      revealed.disconnect();
+      targets.forEach((el) => el.classList.remove('reveal', 'in'));
+    }
+  }, 1500);
+}
+
 // Lightbox for gallery tiles and before/after photos
 const items = Array.from(document.querySelectorAll('.gal-item, .ba-img'));
 const lightbox = document.getElementById('lightbox');
