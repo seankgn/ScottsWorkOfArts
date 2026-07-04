@@ -1,0 +1,15 @@
+<!-- Original logo mark (two houses + flower), replaced 2026-07-03. Kept in case we want to go back. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path d="M22 24 L36 12 L50 24 L46 24 L46 30 L26 30 L26 24 Z" fill="#1e7a4f"/>
+  <rect x="40" y="13" width="4" height="7" fill="#1e7a4f"/>
+  <path d="M10 30 L22 20 L34 30 L31 30 L31 40 L13 40 L13 30 Z" fill="#2fa35e"/>
+  <rect x="19" y="31" width="6" height="6" rx="1" fill="#ffffff"/>
+  <circle cx="52" cy="22" r="3.4" fill="#7cc242"/>
+  <circle cx="57" cy="26" r="3.4" fill="#7cc242"/>
+  <circle cx="47.5" cy="27" r="3.4" fill="#7cc242"/>
+  <circle cx="52.5" cy="29.5" r="3.8" fill="#8dc63f"/>
+  <rect x="51" y="30" width="2.4" height="10" fill="#2fa35e"/>
+  <path d="M2 50 C14 38 34 36 62 40 C46 38 20 42 8 54 Z" fill="#8dc63f"/>
+  <path d="M6 56 C22 44 42 42 62 46 C48 45 26 48 14 58 Z" fill="#2fa35e"/>
+  <path d="M14 61 C30 51 48 49 62 52 C50 52 32 54 22 62 Z" fill="#1e7a4f"/>
+</svg>
